@@ -21899,11 +21899,11 @@ display_line (struct it *it, int cursor_vpos)
 		      row->ends_at_zv_p = false;
 		      row->exact_window_width_line_p = false;
 
-		      if (!FRAME_WINDOW_P (it->f)
-			  || (row->reversed_p
-			      ? WINDOW_LEFT_FRINGE_WIDTH (it->w)
-			      : WINDOW_RIGHT_FRINGE_WIDTH (it->w)) == 0)
-			produce_special_glyphs (it, IT_CONTINUATION);
+                      if (!FRAME_WINDOW_P (it->f)
+                          || (row->reversed_p
+                              ? WINDOW_LEFT_FRINGE_WIDTH (it->w)
+                              : WINDOW_RIGHT_FRINGE_WIDTH (it->w)) == 0)
+                        produce_special_glyphs (it, IT_CONTINUATION);
 
 		      /* Make sure that a non-default face is extended
 			 up to the right margin of the window.  */
